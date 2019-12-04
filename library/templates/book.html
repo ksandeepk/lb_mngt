@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+    td,th {
+            border: 5px solid #0818f56c;
+            text-align:start;
+            padding: 10px;
+            
+        }
+    tr {
+            background-color:#f6f6f8;
+        } 
+    body{
+        background-image: url("https://www.pe.com/wp-content/uploads/2018/11/636337794_27186637-1.jpg" );
+        background-size:35px;
+    }
+    img{
+        border: #08d2f562;
+        shape-margin: 50px;
+    }
+</style>    
+</head>
+<title>Books</title>
+
+<body>
+<h1>Books are: </h1>
+
+<center>    
+    <table>    
+        <tr>
+                <th>Book_name</th>
+                <th>Book_id</th>
+                <th>Author</th>
+                <th>Image</th> 
+        </tr> 
+    </table>        
+    {% for b in data %}  
+    <table>        
+        <tr>
+           
+            <td>{{b.book_name}}</td>
+            <td>{{b.book_id}}</td>
+            <td>{{b.author}}</td>
+            
+        </tr> 
+    </table>
+    {%if b.Image%}
+        <img width="400px" src="{{b.Image.url}}"/>        
+        {%endif%}
+</center>
+        {% endfor %}
+</body>
+</html>

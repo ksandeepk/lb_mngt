@@ -1,0 +1,23 @@
+<html>
+<head>
+    </head> 
+    <style>
+        form ,p {
+            color: navy;
+            background-color: azure ;
+            text-align: center;
+            
+
+        }    
+    </style>   
+<body>          
+    <form action="/login/" method="POST">
+        {%csrf_token%}
+        {{ form.as_p}}
+       <input type="submit"  value="login">click here
+       <center><a href="/forgot/">Forgot password</a></center>
+    </form>
+</body>
+
+</html>
+

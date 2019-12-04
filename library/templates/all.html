@@ -1,0 +1,35 @@
+<style>
+
+table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+}
+
+td,th {
+    border: 1px solid black;
+  text-align:inherit;
+  padding: 8px;    
+}
+
+</style> 
+<table> 
+        <tr>
+            <th>Book_id</th>
+            <th>Book_name</th>
+            <th>Author</th>
+            <th>Branch</th>
+        </tr>    
+        {% for b in data %} 
+        <tr> 
+            <td>{{b.book_id}}</td>
+            <td>{{b.book_name}}<img width="10%" src="{{b.Image.url}}"/></td>
+            <td>{{b.author}}</td>
+            <td>{{b.branch}}</td>
+            <td><a href="/bookedt/{{ b.book_id }}">Edit</a>&emsp14; <a href="/bookdelete/{{ b.book_id }}">Delete</a></td>
+            
+        </tr> bookdelete
+        
+        {% endfor%}
+</table>   
+

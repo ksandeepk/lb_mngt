@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+{% for b in data %}
+
+{{b.author}}
+
+    {%if b.Image%}
+        <img width="400px" src="{{b.Image.url}}"/>
+    {%endif%}        
+       
+
+{% endfor %}

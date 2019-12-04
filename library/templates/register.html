@@ -1,0 +1,22 @@
+<html>
+<head>
+    </head>   
+<style>
+    form{
+        color: blueviolet;
+        }
+
+</style> 
+<body>
+    <form action="/register/" method="POST">
+        {%csrf_token%}
+        {{ form.as_p}}
+        <br>
+        <input type="submit" value="Register">
+    </form>    
+    
+    <h1><a href="/login"> 
+        <input type="submit" value="login"></a></h1>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+Name:{{name}}<br> 
+Username:{{username}}<br>
+Branch:{{branch}}<br>
+Email_id:{{email}}<br>
+<title>search page</title>
+
+
+
+<form action="/search/" method="POST">
+    {%csrf_token%}
+
+    <input type="text" name="bk" placeholder="search">
+    <button><input type="submit" value="search"></button>
+</form>
+
+<a href="/all/">All books</a>
+
